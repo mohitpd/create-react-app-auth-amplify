@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "cognitocf0c6096_identitypool_cf0c6096",
+    "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "cognit3ec31dca",
-    "userPoolName": "cognitocf0c6096_userpool_cf0c6096",
+    "resourceNameTruncated": "catapua544255a",
+    "userPoolName": "catapultauthentication",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -20,16 +20,14 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientGenerateSecret": true,
+    "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "cognitocf0c6096_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "catapua544255a_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "openIdLogPolicy": "cognitocf0c6096_openid_lambda_log_policy",
-    "roleExternalId": "cognitocf0c6096_role_external_id",
-    "useDefault": "manual",
-    "resourceName": "cognitocf0c6096",
+    "sharedId": "a544255a",
+    "resourceName": "catapultauthentication",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -43,12 +41,22 @@
             "Arn"
         ]
     },
-    "hostedUI": false,
-    "userPoolGroupList": [],
     "serviceName": "Cognito",
-    "dependsOn": [],
-    "authProviders": [],
+    "usernameAttributes": [
+        "email"
+    ],
+    "useDefault": "manual",
     "userPoolGroups": false,
+    "userPoolGroupList": [],
     "adminQueries": false,
-    "thirdPartyAuth": false
+    "thirdPartyAuth": false,
+    "authProviders": [],
+    "hostedUI": true,
+    "hostedUIDomainName": "ayn0suxug3pd",
+    "authProvidersUserPool": [
+        "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://www.google.com/\"],\"LogoutURLs\":[\"https://www.google.com/\"]}",
+    "dependsOn": []
 }
